@@ -55,6 +55,8 @@ export default function Gallery() {
       <div className={styles.description}>
         <p style={{ color: styleState.textColour }}>{styleState.description}</p>
       </div>
+
+      <div className={styles.bckImg}></div>
     </section>
   );
 }
