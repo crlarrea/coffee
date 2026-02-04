@@ -1,4 +1,6 @@
 "use client";
+import { CiCoffeeCup } from "react-icons/ci";
+
 import { data } from "@/app/data/data";
 import Slide from "./slide";
 import styles from "@/app/page.module.scss";
@@ -14,11 +16,11 @@ export default function Gallery() {
   });
 
   const updateStyle = (
-    description: string,
     backgroundColourStart: string,
     backgroundColourEnd: string,
     textColour: string,
     imgURL: string,
+    description: string,
   ) => {
     setStyleState({
       backgroundColourStart,
@@ -45,7 +47,7 @@ export default function Gallery() {
             description={entry.description}
             backgroundColourStart={entry.backgroundColourStart}
             backgroundColourEnd={entry.backgroundColourEnd}
-            backgroundImgURL={entry.backgroundImgURL}
+            decorativeBkg={entry.decorativeBkg}
             textColour={entry.textColour}
             imgURL={entry.imgURL}
             updateStyle={updateStyle}
@@ -54,6 +56,13 @@ export default function Gallery() {
       })}
       <div className={styles.description}>
         <p style={{ color: styleState.textColour }}>{styleState.description}</p>
+      </div>
+      <div className={`${styles.cta} ${oswald.className}`}>
+        <p style={{ color: styleState.textColour }}>
+          order
+          <CiCoffeeCup />
+          now!
+        </p>
       </div>
 
       <div className={styles.bckImg}></div>

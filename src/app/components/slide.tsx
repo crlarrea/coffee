@@ -8,8 +8,8 @@ export default function Slide({
   description,
   backgroundColourStart,
   backgroundColourEnd,
+  decorativeBkg,
   imgURL,
-  backgroundImgURL,
   textColour,
   updateStyle,
 }: ItemProps) {
@@ -21,26 +21,32 @@ export default function Slide({
   useEffect(() => {
     if (entry?.isIntersecting) {
       updateStyle(
-        description,
         backgroundColourStart,
         backgroundColourEnd,
         textColour,
         imgURL,
+        description,
       );
     }
   }, [entry?.isIntersecting]);
 
   return (
     <article className={styles.slide} ref={ref}>
-      <div
-        className={`${styles.productImg} `}
-      >
+      <div className={`${styles.productImg} `}>
         <Image
           src={imgURL}
           fill
           sizes="(max-width:1024px) 300px"
           alt={description}
           className={`${entry?.isIntersecting ? styles.imgAnimateIn : styles.imgAnimateOut}`}
+        />
+      </div>
+      <div className={styles.decorativeBkg}>
+        <Image
+          src={decorativeBkg}
+          fill
+          sizes="(max-width:1024px) 300px"
+          alt={description}
         />
       </div>
     </article>

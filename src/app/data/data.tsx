@@ -1,6 +1,7 @@
 const data = [
   {
     imgURL: "/lavender.png",
+    decorativeBkg: "/lavenderBkg.png",
     backgroundColourStart: "#b19bf1",
     backgroundColourEnd: "#3d05dd",
     textColour: "black",
@@ -8,6 +9,7 @@ const data = [
   },
   {
     imgURL: "/matcha.png",
+    decorativeBkg: "/matchaBkg.png",
     backgroundColourStart: "#74a12e",
     backgroundColourEnd: "#2e4012",
     textColour: "black",
@@ -15,6 +17,7 @@ const data = [
   },
   {
     imgURL: "/vanilla.png",
+    decorativeBkg: "/vanillaBkg.png",
     backgroundColourStart: "#fbf7e6",
     backgroundColourEnd: "#f3e3ab",
     textColour: "black",
@@ -22,6 +25,7 @@ const data = [
   },
   {
     imgURL: "/rose.png",
+    decorativeBkg: "/roseBkg.png",
     backgroundColourStart: "#ED7A9B",
     backgroundColourEnd: "#5f313e",
     textColour: "black",
@@ -29,6 +33,7 @@ const data = [
   },
   {
     imgURL: "/tablet.png",
+    decorativeBkg: "/tabletBkg.png",
     backgroundColourStart: "#CC7722",
     backgroundColourEnd: "#52300e",
     textColour: "black",
@@ -36,6 +41,7 @@ const data = [
   },
   {
     imgURL: "/charcoal.png",
+    decorativeBkg: "/charcoalBkg.png",
     backgroundColourStart: "#5f5f5f",
     backgroundColourEnd: "#1B1B1B",
     textColour: "black",

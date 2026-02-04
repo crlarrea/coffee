@@ -4,9 +4,11 @@ type ItemProps = {
   backgroundColourEnd: string;
   textColour: string;
   imgURL: string;
-  backgroundImgURL: string;
+  decorativeBkg: string;
   updateStyle: (
+    descriptoin:string,
     backgroundColourStart: string,
+    backgroundColourEnd: string,
     textColour: string,
     imgURL: string,
   ) => void;
