@@ -37,6 +37,7 @@ export default function Gallery() {
         background: `radial-gradient(circle at 50% 50%,${styleState.backgroundColourStart},${styleState.backgroundColourEnd})`,
       }}
     >
+      <p className={`${styles.info} ${oswald.className}`}>new flavours!</p>
       {data.map((entry, index) => {
         return (
           <Slide
@@ -52,12 +53,7 @@ export default function Gallery() {
         );
       })}
       <div className={styles.description}>
-        <p
-          style={{ color: styleState.textColour }}
-          //   className={oswald.className}
-        >
-          {styleState.description}
-        </p>
+        <p style={{ color: styleState.textColour }}>{styleState.description}</p>
       </div>
     </section>
   );

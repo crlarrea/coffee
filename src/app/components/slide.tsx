@@ -14,7 +14,7 @@ export default function Slide({
   updateStyle,
 }: ItemProps) {
   const [ref, entry] = useIntersectionObserver({
-    threshold: 0.8,
+    threshold: 0.9,
     root: null,
     rootMargin: "0px",
   });
@@ -32,12 +32,15 @@ export default function Slide({
 
   return (
     <article className={styles.slide} ref={ref}>
-      <div className={`${styles.productImg} ${entry?.isIntersecting && styles.imgAnimate}`}>
+      <div
+        className={`${styles.productImg} `}
+      >
         <Image
           src={imgURL}
           fill
           sizes="(max-width:1024px) 300px"
           alt={description}
+          className={`${entry?.isIntersecting ? styles.imgAnimateIn : styles.imgAnimateOut}`}
         />
       </div>
     </article>

@@ -34,5 +34,12 @@ const data = [
     textColour: "black",
     description: "tablet",
   },
+  {
+    imgURL: "/charcoal.png",
+    backgroundColourStart: "#5f5f5f",
+    backgroundColourEnd: "#1B1B1B",
+    textColour: "black",
+    description: "charcoal",
+  },
 ];
 export { data };
