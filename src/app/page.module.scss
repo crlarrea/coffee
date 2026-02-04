@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "cofee_home";
+  src: url("./fonts/Coffee Home.ttf");
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+
+.slide {
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+.description {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid yellow;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  p {
+    padding-top: 14rem;
+    transition: all ease-in-out 1s;
+    font: {
+      size: 8rem;
+      family: "cofee_home";
+    }
+    text-transform: capitalize;
+  }
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.productImg {
+  opacity: 0;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  img {
+    object-fit: contain;
+  }
+}
+
+.info {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font:{
+    size: 2rem;
+  }
+  
+}
+
+.imgAnimate {
+  animation: rollIn 0.8s 0.5s ease-in forwards;
+}
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: rotate(-360deg) scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    filter: unset;
+    transform: rotate(0deg) scale(1);
+  }
+}
